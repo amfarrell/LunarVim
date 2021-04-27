@@ -92,6 +92,19 @@ return require("packer").startup(function(use)
 		-- Sane gx for netrw_gx bug
     use {"felipec/vim-sanegx"}
 
+    -- Custom for Andrew Farrell
+    use {"amfarrell/org.vim", opt = true}
+    use {"amfarrell/md-img-paste.vim", opt = true}
+    use {"dag/vim-fish", opt = true}
+
+    -- Added by Andrew Farrell to show org mode files.
+    require_plugin("org.vim")
+    -- Added by Andrew Farrell to paste images into vim.
+    require_plugin("md-img-paste.vim")
+    -- Added by Andrew Farrell for fish highlighting.
+    require_plugin("vim-fish")
+
+    -- Comes with LunarVim
     require_plugin("nvim-lspconfig")
     require_plugin("lspsaga.nvim")
     require_plugin("nvim-lspinstall")

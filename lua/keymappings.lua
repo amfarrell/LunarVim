@@ -76,3 +76,20 @@ vim.cmd("inoremap <silent><expr> <CR>      compe#confirm('<CR>')")
 vim.cmd("inoremap <silent><expr> <C-e>     compe#close('<C-e>')")
 vim.cmd("inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })")
 vim.cmd("inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })")
+
+-- Andrew md-img-paste
+-- vim.cmd('autocmd FileType markdown nmap PI :call mdip#MarkdownClipboardImage()<CR>')
+-- vim.cmd('autocmd FileType org nmap PI :call mdip#MarkdownClipboardImage()<CR>')
+-- Those FileType-specific commands work, but I'm better off mapping it for all files.
+vim.cmd('nmap PI :call mdip#MarkdownClipboardImage()<CR><Esc>')
+
+vim.cmd('map Q <nop>')
+vim.cmd('map WQ wq')
+vim.cmd('map Wq wq')
+vim.cmd('map wQ wq')
+vim.cmd('map W w')
+vim.cmd('map W w')
+
+vim.cmd('command WQ wq')
+vim.cmd('command Wq wq')
+vim.cmd('command Q <nop>')
